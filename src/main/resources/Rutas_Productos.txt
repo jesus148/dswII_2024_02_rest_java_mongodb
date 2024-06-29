@@ -1,0 +1,40 @@
+PASO 1 (POST)
+http://localhost:8092/rest/producto/registraProducto
+{
+    "sku":9999108200050023 ,
+    "name": "MohamedSalah", 
+    "type": "liverpool",
+    "regularPrice":13.34,
+    "salePrice":473.34
+}
+
+PASO 2(PUT)
+http://localhost:8092/rest/producto/actualizaProducto/66806c84e81a7340e7b41a13
+{
+    "sku":9999108200050023 ,
+    "name": "ToniKross", 
+    "type": "realMadrid",
+    "regularPrice":13.34,
+    "salePrice":473.34
+}
+
+PASO 5(DELETE)
+http://localhost:8092/rest/producto/eliminaProducto/66806c84e81a7340e7b41a13
+
+PASO 3(GET all)
+http://localhost:8092/rest/producto/listaTodoProducto
+
+PASO 3(GET por pk)
+http://localhost:8092/rest/producto/buscaPorPk/573f7391f29313caab9a1fec
+
+PASO 3(GET por name)
+http://localhost:8092/rest/producto/listaProductoPorNombre/Cano
+
+PASO 3(GET por 2 parametros)
+http://localhost:8092/rest/producto/listaProductoPorDosCampos?name1=Lens&name2=Canon%201
+
+PASO 3(GET por 2 parametros include priceregular)
+http://localhost:8092/rest/producto/listaProductoRegular?regular=199.97&regular=879.97
+
+PASO 3(GET por 2 parametros include saleprice)
+http://localhost:8092/rest/producto/listaProductoSale?sale=339.96

@@ -1,0 +1,54 @@
+
+
+======================REST(MICROSERVICIOS) CRUD MONGODB TABLE PRODUCTO ===============
+
+Microservcio :
+Un microservicio REST es una pequeña aplicación independiente que cumple una función específica dentro de una arquitectura más grande. Se comunica con otros microservicios y clientes a través de interfaces RESTful, utilizando HTTP para las solicitudes y respuestas. Aquí tienes una descripción básica y algunos pasos para crear un microservicio REST:
+
+
+Bd: Mongodb > Examen(bd) > tabla(collecion)producto
+ruta : D:\DSW_II_2\dsw_202402_domingo_grupo_03_parte02
+
+
+probando consulta MongoDbCompas :
+
+> usando in(incuido)
+{ 'salePrice' : { $in: [339.96 ] }}
+{regularPrice : {$in:[199.97,599.98]}}
+>usando regex(like)
+{name: { $regex:  'Lens$'  , '$options' : 'i'} }
+{name: { $regex:  '^Lens|Canon'  , '$options' : 'i'} }
+
+
+
+
+
+
+
+
+Estructura:
+
+1. > src\main\java\com\example\examen\controller
+   ProductoController.java
+
+2. > src\main\java\com\example\examen\entity
+     Producto.java
+
+3. > src\main\java\com\example\examen\service
+     ProductoService.java
+     ProductoServiceImpl.java
+
+4. >  src\main\resources (files recursos y conexion bd)
+      application.properties
+      Rutas_Productos.txt(ruta endpoints microservicio)
+
+5. > dsw_202402_domingo_grupo_03_parte02\pom.xml (dependencia nosql)
+   pom.xml      
+     <dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-data-mongodb</artifactId>
+	</dependency>
+    > recordar puede salir error poner solo 1 dependencia de bd 
+
+6. >  ruta probando postaman 
+      Postama > DSW_II > EF    
