@@ -1,0 +1,27 @@
+
+
+------PASO 1 (POST)
+http://localhost:8050/url/medicaments/saveMedicament
+{
+    "nombre":"luisDiasz",
+    "descripcion":"liverpool",
+    "costo":"7387"
+}
+
+-------PASO 2(PUT)
+http://localhost:8050/url/medicaments/updateMedicaments
+{
+    "medicamento_id":2,
+    "nombre":"tonikross",
+    "descripcion":"realMadrid",
+    "costo":"7387"
+}
+
+PASO 3(DELETE)
+http://localhost:8050/url/medicaments/deleteMedicament/2
+
+PASO 4(GET)
+http://localhost:8050/url/medicaments/listAllMedicaments
+
+PASO 4(GET)
+http://localhost:8050/url/medicaments/4
